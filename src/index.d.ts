@@ -7,7 +7,7 @@ export interface OutbrainWidgetProps {
   obInstallationKey?: string;
   obInstallationType?: string;
   obAppVer?: string;
-  isSecured?: string;
+  isSecured?: boolean;
   obContentUrl?: string | null;
   obPortalUrl?: string | null;
   obBundleUrl?: string | null;
@@ -15,7 +15,7 @@ export interface OutbrainWidgetProps {
   obPsub?: string | null;
   obAppId?: string | null;
   externalId?: string | null;
-  obDarkMode?: string | null;
+  obDarkMode?: boolean | null;
 }
 
 export const OutbrainWidget: FC<OutbrainWidgetProps>;
