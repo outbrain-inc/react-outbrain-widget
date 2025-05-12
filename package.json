@@ -1,6 +1,6 @@
 {
   "name": "react-outbrain-widget",
-  "version": "1.6.0-beta.2",
+  "version": "1.6.0-beta.3",
   "description": "A component to embed a outbrain widget inside a react app",
   "main": "build/index.js",
   "peerDependencies": {
@@ -32,6 +32,7 @@
     "react-dom": "^18.3.1",
     "typescript": "^5.3.0",
     "webpack": "^5.99.7",
-    "webpack-cli": "^6.0.1"
+    "webpack-cli": "^6.0.1",
+    "copy-webpack-plugin": "^11.0.0"
   }
 }

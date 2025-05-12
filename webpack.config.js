@@ -1,5 +1,7 @@
 //project based on https://medium.com/@BrodaNoel/how-to-create-a-react-component-and-publish-it-in-npm-668ad7d363ce
 var path = require('path');
+var CopyWebpackPlugin = require('copy-webpack-plugin'); // Add this line
+
 module.exports = {
   mode: 'production',
   entry: './src/index.jsx',
@@ -25,5 +27,13 @@ module.exports = {
   externals: {
     'react': 'commonjs react',
     'react-dom' : 'commonjs react-dom'
-  }
+  },
+  plugins: [
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'src/index.d.ts', to: 'index.d.ts' }, // Copy index.d.ts to build folder
+      ],
+    }),
+  ],
 };
+
